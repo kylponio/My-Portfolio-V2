@@ -23,7 +23,7 @@ export default function Home() {
   const [active, setActive] = useState<SectionKey>("home");
 
   return (
-    <main className="h-screen md:overflow-hidden overflow-auto bg-[#020617] text-white pt-20 md:pt-24">
+    <main className="min-h-screen bg-[#020617] text-white">
 
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full flex justify-center gap-6 p-4 z-50 backdrop-blur bg-black/30">
@@ -41,7 +41,7 @@ export default function Home() {
       </nav>
 
       {/* CONTENT */}
-      <div className="h-full flex items-center justify-center">
+      <div className="pt-20 md:pt-24">
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
@@ -49,7 +49,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.5 }}
-            className="w-full h-full flex items-center justify-center"
+            className="w-full"
           >
             {sections[active]}
           </motion.div>

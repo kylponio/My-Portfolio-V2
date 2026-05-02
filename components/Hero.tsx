@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-  <section className="h-screen flex items-center justify-center px-6">
-
-
+    <section id="home" className="h-screen flex items-center justify-center px-6">
       <div className="grid md:grid-cols-2 gap-10 items-center w-full max-w-7xl mx-auto">
 
         {/* LEFT SIDE */}
@@ -29,22 +27,59 @@ export default function Hero() {
             using Next.js, React, and Node.js.
           </p>
 
-          {/* BUTTONS */}
+          {/* BUTTONS (FIXED - WORKING LINKS) */}
           <div className="flex gap-4 mt-6">
-            <button className="bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-500 transition shadow-lg shadow-blue-500/20">
-              Hire Me
-            </button>
 
-            <button className="border border-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition">
+            {/* HIRE ME */}
+            <a
+              href="https://facebook.com/kylponio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-500 transition shadow-lg shadow-blue-500/20"
+            >
+              Hire Me
+            </a>
+
+            {/* LET'S TALK */}
+            <a
+              href="https://facebook.com/kylponio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-blue-500 px-5 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition"
+            >
               Let's Talk
-            </button>
+            </a>
+
           </div>
 
           {/* SOCIAL */}
           <div className="flex gap-4 mt-6 text-blue-400 text-xl">
-            <a href="#" className="hover:text-blue-500 transition">🌐</a>
-            <a href="#" className="hover:text-blue-500 transition">🐙</a>
-            <a href="#" className="hover:text-blue-500 transition">💼</a>
+
+            <a
+              href="#home"
+              className="hover:text-blue-500 transition"
+            >
+              🌐
+            </a>
+
+            <a
+              href="https://github.com/kylponio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              🐙
+            </a>
+
+            <a
+              href="https://facebook.com/kylponio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              💼
+            </a>
+
           </div>
         </motion.div>
 
