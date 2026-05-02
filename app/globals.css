@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Force Usap widget above everything */
+iframe[src*="usap.chat"],
+div[id*="usap"],
+div[class*="usap"] {
+  z-index: 999999 !important;
+  position: fixed !important;
+}
